@@ -1,4 +1,4 @@
-# [CVPR 2025] ESC: Erasing Space Concept for Knowledge Deletion
+# [CVPR 2025 Highlight] ESC: Erasing Space Concept for Knowledge Deletion
 
 Official PyTorch implementation for CVPR 2025 paper:  
 
