@@ -8,20 +8,19 @@ Tae-Young Lee\*, Sundong Park*, Minwoo Jeon*, Hyoseok Hwang<sup>$\dagger$</sup> 
 
 [![arXiv](https://img.shields.io/badge/arXiv-2405.09879-b31b1b.svg)](https://arxiv.org/abs/2504.02199) 
 
-
 ## 📋 To-Do
 
 - [ ] detailed scripts.
-- [ ] upload *environment.yaml*.
-- [ ] upload the original model checkpoints.
+- [x] upload *requirements.txt*.
+- [x] upload the original model checkpoints.
 
 
 # Environment
-- Python 3.8.x
-- Pytorch 1.10.0
-- Torchvision 0.11.1
+- Python 3.10.x
+- Torch 2.1.0
+- Torchvision 0.16.0
 - NVIDIA GeForce RTX 3090 / A5000 / A6000
-- CUDA 11.8
+- CUDA 12.2
 
 
 
@@ -30,9 +29,13 @@ Tae-Young Lee\*, Sundong Park*, Minwoo Jeon*, Hyoseok Hwang<sup>$\dagger$</sup> 
 ```bash
 git clone git@github.com/KHU-VGI/ESC.git
 cd ESC
-conda env create -f environment.yaml
+conda create -n ESC python=3.10
 conda activate ESC
+pip install -r requirements.txt
 ```
+
+# Model Checkpoints
+[[checkpoints]](https://drive.google.com/drive/folders/1yzahmyaNcP9Y10PTDzGdJGfqP617vrzB?usp=drive_link) 
 
 
 # For conducting unlearning
