@@ -114,8 +114,8 @@ def parse_args():
     parser.add_argument('--kr_batch_size', type=int, default=64, help='batch size for Knowledge Retention')
     
     ####### ESC(-T) setting #######
-    parser.add_argument('--p', type=float, default=3, help='pruning hyperparameter for ESC')
-    parser.add_argument('--thershold', type=float, default=0.8, help='thershold for ESC-T')
+    parser.add_argument('--p', type=float, default=1.5, help='pruning hyperparameter for ESC')
+    parser.add_argument('--threshold', type=float, default=0.7, help='threshold for ESC-T')
 
     args = parser.parse_args()
 
@@ -222,7 +222,6 @@ def main(args):
         print('*' * 100)
         print(' ' * 20 + 'begin ESC_T unlearning')
         print('*' * 100)
-        print(ckpt_dir+'/'+args.data_name+"_ESC_T_model")
 
         start = time.time()
 
@@ -295,10 +294,9 @@ def main(args):
             if num_hits == 0:
                 break
 
-        mask[mask>args.threshold]=1
-        mask[mask<=args.threshold]=0
+        mask = (mask > args.threshold).to(mask.dtype)
 
-        model.esc_add(u * mask, esc_t=True)
+        model.esc_set(u * mask, esc_t=True)
 
         end = time.time()
         print('ESC-T unlearning time:', end-start, 's')
