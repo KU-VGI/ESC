@@ -4,7 +4,7 @@ Official PyTorch implementation for CVPR 2025 paper:
 
 **ESC: Erasing Space Concept for Knowledge Deletion**   
 
-Tae-Young Lee\*, Sundong Park*, Minwoo Jeon*, Hyoseok Hwang<sup>$\dagger$</sup> , and Gyeong-Moon Park<sup>$\dagger$</sup> 
+[Tae-Young Lee](https://github.com/TY-LEE-KR)\*, Sundong Park*, Minwoo Jeon*, Hyoseok Hwang<sup>$\dagger$</sup> , and Gyeong-Moon Park<sup>$\dagger$</sup> 
 
 [![arXiv](https://img.shields.io/badge/arXiv-2405.09879-b31b1b.svg)](https://arxiv.org/abs/2504.02199) 
 
