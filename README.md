@@ -10,7 +10,7 @@ Official PyTorch implementation for CVPR 2025 paper:
 
 ## 📋 To-Do
 
-- [ ] detailed scripts.
+- [x] detailed scripts.
 - [x] upload *requirements.txt*.
 - [x] upload the original model checkpoints.
 
